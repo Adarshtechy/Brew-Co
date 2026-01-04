@@ -16,67 +16,39 @@ It includes HTML, CSS, JavaScript, and static assets like images and icons to cr
 - 📂 Organized folder structure (HTML, CSS, JS, images)
 
 ## 📁 Project Structure
+```
 Brew-Co/
-
 ├─ Css/
-
-    ├──about.css
-    
-    ├──contact.css
-    
-    ├──gallery.css
-    
-    ├──home.css
-    
-    ├──menu.css
-    
-    ├──order.css
-    
-    ├──reservation.css
-    
-    ├──style.css
-
+│     ├──about.css    
+│     ├──contact.css    
+│     ├──gallery.css   
+│     ├──home.css   
+│     ├──menu.css  
+│     ├──order.css  
+│     ├──reservation.css    
+│     ├──style.css
 ├─ js/ 
-
-    ├──about.js
-    
-    ├──contact.js
-    
-    ├──gallery.js
-    
-    ├──home.js
-    
-    ├──main.js
-    
-    ├──menu.js
-    
-    ├──order.js
-    
-    ├──reservation.js
-
+│     ├──about.js 
+│     ├──contact.js 
+│     ├──gallery.js 
+│     ├──home.js 
+│     ├──main.js  
+│     ├──menu.js 
+│     ├──order.js 
+│     ├──reservation.js
 ├─ images/ 
-
-    ├──gallery/
-    
-    ├── image assets
-
+│     ├──gallery/
+│     ├── image assets
 ├─ Html/ 
-
-    ├──about.html
-    
-    ├──contact.html
-    
-    ├──gallery.html
-    
-    ├──index.html
-    
-    ├──menu.html
-    
-    ├──order.html
-    
-    ├──reservation.html
-
+│    ├──about.html
+│    ├──contact.html
+│    ├──gallery.html
+│    ├──index.html
+│    ├──menu.html
+│    ├──order.html
+│    ├──reservation.html
 └─ README.md — project documentation
+```
 
 
 ## 🛠️ Technologies Used
