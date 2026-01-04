@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | Brew &amp; Co.</title>
+    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="stylesheet" href="/Css/reservation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/Html/index.html" class="logo">
+                <span class="logo-icon">☕</span>
+                <span class="logo-text">Brew &amp; Co.</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="/Html/index.html" class="nav-link">Home</a></li>
+                <li><a href="/Html/about.html" class="nav-link">About</a></li>
+                <li><a href="/Html/menu.html" class="nav-link">Menu</a></li>
+                <li><a href="/Html/order.html" class="nav-link">Order</a></li>
+                <li><a href="/Html/reservation.html" class="nav-link active">Reservation</a></li>
+                <li><a href="/Html/gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="/Html/contact.html" class="nav-link">Contact</a></li>
+                <li><a href="/Html/order.html" class="btn btn-outline">Order Now</a></li>
+            </ul>
+
+            <button class="hamburger" aria-label="Menu toggle" type="button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Book a Table</h1>
+            <p class="page-subtitle">Reserve your spot in our cozy coffee house</p>
+        </div>
+    </section>
+
+    <!-- Reservation Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="reservation-wrapper">
+                <div class="reservation-form-container">
+                    <div class="reservation-steps">
+                        <div class="step-indicator">
+                            <span class="step active" data-step="1">1</span>
+                            <span class="step" data-step="2">2</span>
+                            <span class="step" data-step="3">3</span>
+                        </div>
+
+                        <!-- Step 1: Date & Time -->
+                        <div class="reservation-step active" id="step-1">
+                            <h2 class="section-title">Select Date &amp; Time</h2>
+
+                            <div class="calendar-container">
+                                <div class="calendar-header">
+                                    <button class="nav-btn prev-month" type="button" aria-label="Previous month">
+                                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                    </button>
+
+                                    <h3 class="month-year">December 2025</h3>
+
+                                    <button class="nav-btn next-month" type="button" aria-label="Next month">
+                                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+
+
+                                <div class="calendar-grid">
+                                    <!-- Calendar days will be generated here -->
+                                </div>
+                            </div>
+
+                            <div class="time-selection">
+                                <h3>Available Times</h3>
+                                <div class="time-slots">
+                                    <!-- Time slots will be generated here -->
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary next-step" data-next="2" type="button">Continue to Party Size</button>
+                        </div>
+
+                        <!-- Step 2: Party Size -->
+                        <div class="reservation-step" id="step-2">
+                            <h2 class="section-title">Party Size</h2>
+
+                            <div class="party-size-selection">
+                                <div class="size-option active" data-size="2">
+                                    <div class="size-icon">
+                                        <i class="fas fa-user-friends"></i>
+                                    </div>
+                                    <h3>2 People</h3>
+                                    <p>Perfect for couples</p>
+                                </div>
+
+                                <div class="size-option" data-size="4">
+                                    <div class="size-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3>4 People</h3>
+                                    <p>Small group gathering</p>
+                                </div>
+
+                                <div class="size-option" data-size="6">
+                                    <div class="size-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3>6 People</h3>
+                                    <p>Family or friends</p>
+                                </div>
+
+                                <div class="size-option" data-size="8">
+                                    <div class="size-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3>8+ People</h3>
+                                    <p>Large group (contact us)</p>
+                                </div>
+                            </div>
+
+                            <div class="table-preview">
+                                <h3>Table Preview</h3>
+                                <div class="table-visualization">
+                                    <div class="table" data-size="2">
+                                        <div class="seat"></div>
+                                        <div class="seat"></div>
+                                    </div>
+                                    <div class="table" data-size="4">
+                                        <div class="seat"></div>
+                                        <div class="seat"></div>
+                                        <div class="seat"></div>
+                                        <div class="seat"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-navigation">
+                                <button class="btn btn-outline-1 prev-step" data-prev="1" type="button">Back to Date &amp; Time</button>
+                                <button class="btn btn-primary next-step" data-next="3" type="button">Continue to Details</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Details & Confirmation -->
+                        <div class="reservation-step" id="step-3">
+                            <h2 class="section-title">Your Details</h2>
+
+                            <form class="reservation-details-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="name">Full Name *</label>
+                                        <input type="text" id="name" placeholder="John Doe" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" placeholder="john@example.com" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number *</label>
+                                        <input type="tel" id="phone" placeholder="(123) 456-7890" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="occasion">Occasion (Optional)</label>
+                                        <select id="occasion">
+                                            <option value="">Select an occasion</option>
+                                            <option value="birthday">Birthday</option>
+                                            <option value="anniversary">Anniversary</option>
+                                            <option value="business">Business Meeting</option>
+                                            <option value="date">Date Night</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group full-width">
+                                        <label for="special-requests">Special Requests</label>
+                                        <textarea id="special-requests" placeholder="Any dietary restrictions, allergies, or special requirements..."></textarea>
+                                    </div>
+
+                                    <div class="form-group full-width">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="newsletter" checked>
+                                            <span>Subscribe to our newsletter for updates and special offers</span>
+                                        </label>
+
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="terms" required>
+                                            <span>I agree to the <a href="#">terms and conditions</a> *</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="reservation-summary">
+                                    <h3>Reservation Summary</h3>
+                                    <div class="summary-details">
+                                        <div class="summary-item">
+                                            <span>Date:</span>
+                                            <span class="summary-value" id="summary-date">--</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span>Time:</span>
+                                            <span class="summary-value" id="summary-time">--</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span>Party Size:</span>
+                                            <span class="summary-value" id="summary-party">--</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span>Location:</span>
+                                            <span class="summary-value">123 Coffee Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary submit-reservation">
+                                    <i class="fas fa-calendar-check"></i>
+                                    Confirm Reservation
+                                </button>
+                            </form>
+
+                            <div class="step-navigation">
+                                <button class="btn btn-outline-1 prev-step" data-prev="2" type="button">Back to Party Size</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reservation-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Opening Hours</h3>
+                        <ul class="hours-list">
+                            <li><span>Mon - Fri:</span> <span>7:00 AM - 9:00 PM</span></li>
+                            <li><span>Saturday:</span> <span>8:00 AM - 10:00 PM</span></li>
+                            <li><span>Sunday:</span> <span>8:00 AM - 8:00 PM</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Group Bookings</h3>
+                        <p>
+                            For parties of 8 or more, please contact us directly at
+                            <a href="tel:+1234567890">(123)&nbsp;456&#8209;7890</a>
+                            or
+                            <a href="mailto:reservations@brewandco.com">reservations@brewandco.com</a>.
+                        </p>
+
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Special Events</h3>
+                        <p>Host your special occasion with us! We offer private bookings for birthdays, anniversaries, and corporate events.</p>
+                        <a href="/Html/contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <h3>Important Notes</h3>
+                        <ul class="notes-list">
+                            <li>Please arrive 5 minutes before your reservation</li>
+                            <li>Tables are held for 15 minutes past reservation time</li>
+                            <li>Cancellations must be made 2 hours in advance</li>
+                            <li>Outside food is not permitted</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <button class="close-modal" type="button">&times;</button>
+            <div class="confirmation-content">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Reservation Confirmed!</h2>
+                <p class="confirmation-message">Your table has been successfully reserved.</p>
+
+                <div class="reservation-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Reservation ID:</span>
+                        <span class="detail-value" id="confirm-id">BCR-20231215-001</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Date &amp; Time:</span>
+                        <span class="detail-value" id="confirm-datetime">--</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Party Size:</span>
+                        <span class="detail-value" id="confirm-party">--</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Location:</span>
+                        <span class="detail-value">123 Coffee Street, Brew City</span>
+                    </div>
+                </div>
+
+                <div class="confirmation-actions">
+                    <p>A confirmation email has been sent to your email address.</p>
+                    <button class="btn btn-primary close-confirmation" type="button">Done</button>
+                    <button class="btn btn-outline-1 add-to-calendar" type="button">
+                        <i class="far fa-calendar-plus"></i>
+                        Add to Calendar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">☕</span>
+                        <span class="logo-text">Brew &amp; Co.</span>
+                    </div>
+                    <p class="footer-description">Crafting exceptional coffee experiences since 2010. We source the finest beans and create handcrafted beverages with passion.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/Html/index.html">Home</a></li>
+                        <li><a href="/Html/menu.html">Our Menu</a></li>
+                        <li><a href="/Html/about.html">About Us</a></li>
+                        <li><a href="/Html/gallery.html">Gallery</a></li>
+                        <li><a href="/Html/reservation.html">Reservations</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Opening Hours</h3>
+                    <ul class="opening-hours">
+                        <li><span>Monday - Friday</span> <span>7:00 AM - 9:00 PM</span></li>
+                        <li><span>Saturday</span> <span>8:00 AM - 10:00 PM</span></li>
+                        <li><span>Sunday</span> <span>8:00 AM - 8:00 PM</span></li>
+                    </ul>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, Brew City</p>
+                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                        <p><i class="fas fa-envelope"></i> hello@brewandco.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p class="newsletter-text">Subscribe to get updates on new brews and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Brew &amp; Co. All rights reserved. | Designed with <i class="fas fa-heart"></i> for coffee lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top" type="button">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/reservation.js"></script>
+</body>
+</html>
