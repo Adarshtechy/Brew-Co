@@ -49,7 +49,7 @@ Brew-Co/
 │    ├──reservation.html
 └─ README.md — project documentation
 ```
-'''
+---
 
 ## 🛠️ Technologies Used
 
